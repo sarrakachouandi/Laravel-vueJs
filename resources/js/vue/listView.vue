@@ -4,7 +4,7 @@
             <list-item
                 :item="item"
                 id="item"
-                v-on:itemchanged="$emit('relodlist')"
+                v-on:itemChanged="$emit('reloadlist')"
             />
         </div>
     </div>
@@ -12,7 +12,7 @@
 
 <script>
 import listItem from "./listItem";
-import ListItem from "./listItem.vue";
+// import ListItem from "./listItem.vue";
 export default {
     props: ["items"],
     components: {

@@ -18,7 +18,7 @@
 export default {
     props: ["item"],
     methods: {
-        updateCheck() {
+        UpdateCheck() {
             axios
                 .put("api/item/" + this.item.id, {
                     item: this.item
@@ -37,7 +37,7 @@ export default {
                 .delete("api/item/" + this.item.id)
                 .then(response => {
                     if (response.status == 200) {
-                        this.$emit("itemhaschanged");
+                        this.$emit("itemChanged");
                     }
                 })
                 .catch(error => {
